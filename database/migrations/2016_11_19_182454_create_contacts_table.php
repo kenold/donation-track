@@ -15,16 +15,16 @@ class CreateContactsTable extends Migration
     {
         Schema::create('contacts', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('fname', 100);
-            $table->char('mname', 1);
-            $table->string('lname', 100);
+            $table->string('fname', 250);
+            $table->string('lname', 250);
+            /*$table->char('mname', 1)->nullable();
             $table->char('sex', 1);
             $table->date('dob');
             $table->string('job_title', 100);
             $table->string('company', 100);
-            $table->string('address1', 200);
+            $table->string('address1', 250);
             $table->string('address2', 200);
-            $table->string('city', 100);
+            $table->string('city', 250);
             $table->char('state', 2)->default('FL');
             $table->mediumInteger('zip')->unsigned();
             $table->string('country', 100);
@@ -34,7 +34,7 @@ class CreateContactsTable extends Migration
             $table->string('facebook', 150);
             $table->string('twitter', 150);
             $table->string('skype');
-            $table->text('notes');
+            $table->text('notes');*/
             $table->timestamps();
         });
     }
