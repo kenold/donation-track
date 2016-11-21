@@ -12,16 +12,21 @@ class DonationsTableSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('donations')->truncate();
+
+        $faker = Faker::create();
         $donations = [];
 
         foreach (range(1, 250) as $index) {
             $donations[] = [
                 'contact_id' => $faker->numberBetween($min = 1, $max = 20),
-                'date' => $faker->date;
-                'item_name' => $faker->,
+                'date' => $faker->date,
+                'item_name' => $faker->randomElement($array = array ('Tylenol','NyQuil','Nasal Spray', 'Cough Drop', 'Vitamins', 'Vicks', 'Fever Fluid', 'Pain Reliever', 'Equate Allergy', 'Anti-Biotic')),
                 'quantity' => $faker->numberBetween($min = 5, $max = 100),
-                'category_id' => $faker->numberBetween($min = 1, $max = 5),
+                //'category_id' => 1,
             ];
         }
+
+        DB::table('donations')->insert($donations);
     }
 }
