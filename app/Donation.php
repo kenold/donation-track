@@ -9,4 +9,8 @@ class Donation extends Model
     public function contact() {
         return $this->belongsTo('App\Contact');
     }
+
+    public function category() {
+        return $this->belongsTo('App\Category');
+    }
 }
