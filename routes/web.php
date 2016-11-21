@@ -24,7 +24,7 @@ Route::get('/', function () {
 
 Route::get('contact/{id}', function ($id) {
     $contact = App\Contact::find($id);
-    echo $contact->fname . ", " . $contact->lname;
+    echo "<img src= " . $contact->photo_url . " width=140 />" . $contact->fname . ", " . $contact->lname;
 
     echo '<ul>';
     foreach ($contact->donations as $donation) {
