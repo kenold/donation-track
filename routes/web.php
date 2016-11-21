@@ -28,7 +28,7 @@ Route::get('contact/{id}', function ($id) {
 
     echo '<ul>';
     foreach ($contact->donations as $donation) {
-        echo '<li>' . $donation->item_name . '</li>';
+        echo '<li>' . $donation->item_name . ' (' . $donation->quantity . ')' . '</li>';
     }
     echo '</ul>';
 });
