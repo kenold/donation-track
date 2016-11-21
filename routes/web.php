@@ -12,7 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $contacts = App\Contact::all();
+
+    echo '<ul>';
+    foreach ($contacts as $contact) {
+        echo '<li>' . $contact->fname . ", " . $contact->lname . '</li>';
+    }
+    echo '</ul>';
+
 });
 
 Route::get('contact/{id}', function ($id) {
