@@ -16,11 +16,12 @@ class CreateDonationsTable extends Migration
         Schema::create('donations', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('contact_id')->unsigned();
-            $table->integer('category_id')->unsigned();
+            $table->dateTime('date')->default(date("Y-m-d"));
             $table->string('item_name', 255);
             $table->bigInteger('quantity');
             $table->integer('category_id')->unsigned();
             $table->foreign('contact_id')->references('id')->on('contacts');
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
         });
     }
