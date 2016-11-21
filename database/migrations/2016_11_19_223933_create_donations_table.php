@@ -19,6 +19,7 @@ class CreateDonationsTable extends Migration
             $table->integer('category_id')->unsigned();
             $table->string('item_name', 255);
             $table->bigInteger('quantity');
+            $table->integer('category_id')->unsigned();
             $table->foreign('contact_id')->references('id')->on('contacts');
             $table->timestamps();
         });
