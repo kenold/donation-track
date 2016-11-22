@@ -20,7 +20,7 @@ class DonationsTableSeeder extends Seeder
         foreach (range(1, 250) as $index) {
             $donations[] = [
                 'contact_id' => $faker->numberBetween($min = 1, $max = 20),
-                'date' => $faker->date,
+                'date' => $faker->date($format = 'Y-m-d', $max = 'now'),
                 'item_name' => $faker->randomElement($array = array ('Tylenol','NyQuil','Nasal Spray', 'Cough Drop', 'Vitamins', 'Vicks', 'Fever Fluid', 'Pain Reliever', 'Equate Allergy', 'Anti-Biotic')),
                 'quantity' => $faker->numberBetween($min = 5, $max = 100),
                 'created_at' => date("Y-m-d H:i:s"),
