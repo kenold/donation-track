@@ -20,8 +20,6 @@ class CreateDonationsTable extends Migration
             $table->float('amount');
             $table->integer('item_id')->unsigned();
             $table->bigInteger('quantity');
-            $table->foreign('contact_id')->references('id')->on('contacts');
-            $table->foreign('item_id')->references('id')->on('items');
             $table->timestamps();
         });
     }
@@ -33,6 +31,9 @@ class CreateDonationsTable extends Migration
      */
     public function down()
     {
+        //disable foreign key check for this connection before running seeders
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         Schema::dropIfExists('donations');
+        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 }

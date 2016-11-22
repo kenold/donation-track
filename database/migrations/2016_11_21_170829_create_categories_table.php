@@ -16,6 +16,7 @@ class CreateCategoriesTable extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->default('Medicine');
+            $table->text('notes');
             $table->timestamps();
         });
     }
@@ -27,6 +28,9 @@ class CreateCategoriesTable extends Migration
      */
     public function down()
     {
+        //disable foreign key check for this connection before running seeders
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         Schema::dropIfExists('categories');
+        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 }
