@@ -15,7 +15,7 @@ class CreateDonationsTable extends Migration
     {
         Schema::create('donations', function (Blueprint $table) {
             $table->increments('id');
-            $table->dateTime('date')->default(date("Y-m-d"));
+            $table->date('date')->default(date("Y-m-d"));
             $table->integer('contact_id')->unsigned();
             $table->float('amount');
             $table->integer('item_id')->unsigned();
