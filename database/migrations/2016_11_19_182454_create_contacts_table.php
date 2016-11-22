@@ -35,7 +35,7 @@ class CreateContactsTable extends Migration
             $table->string('twitter', 150);
             $table->string('skype');
             $table->text('notes');
-            $table->timestamps();            
+            $table->timestamps();
         });
     }
 
@@ -47,8 +47,8 @@ class CreateContactsTable extends Migration
     public function down()
     {
         //disable foreign key check for this connection before running seeders
-        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+        //DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         Schema::dropIfExists('contacts');
-        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
+        //DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 }
