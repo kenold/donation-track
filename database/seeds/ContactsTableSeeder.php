@@ -38,6 +38,8 @@ class ContactsTableSeeder extends Seeder
                     'twitter' => 'http://www.twitter.com/' . $faker->userName,
                     'skype' => $faker->userName,
                     'notes' => $faker->sentence($nbWords = 12, $variableNbWords = true),
+                    'created_at' => date("Y-m-d H:i:s"),
+                    'updated_at' => date("Y-m-d H:i:s")
                 ];
             }
         DB::table('contacts')->insert($contacts);

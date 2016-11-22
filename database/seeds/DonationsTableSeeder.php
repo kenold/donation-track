@@ -23,7 +23,8 @@ class DonationsTableSeeder extends Seeder
                 'date' => $faker->date,
                 'item_name' => $faker->randomElement($array = array ('Tylenol','NyQuil','Nasal Spray', 'Cough Drop', 'Vitamins', 'Vicks', 'Fever Fluid', 'Pain Reliever', 'Equate Allergy', 'Anti-Biotic')),
                 'quantity' => $faker->numberBetween($min = 5, $max = 100),
-                //'category_id' => 1,
+                'created_at' => date("Y-m-d H:i:s"),
+                'updated_at' => date("Y-m-d H:i:s")
             ];
         }
 
