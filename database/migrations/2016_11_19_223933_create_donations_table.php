@@ -19,7 +19,7 @@ class CreateDonationsTable extends Migration
             $table->integer('contact_id')->unsigned();
             $table->float('amount');
             $table->integer('item_id')->unsigned();
-            $table->bigInteger('quantity');
+            $table->bigInteger('item_qty');
             $table->timestamps();
         });
     }
