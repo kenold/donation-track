@@ -21,7 +21,9 @@ class DonationsTableSeeder extends Seeder
             $donations[] = [
                 'contact_id' => $faker->numberBetween($min = 1, $max = 20),
                 'date' => $faker->date($format = 'Y-m-d', $max = 'now'),
-                'item_name' => $faker->randomElement($array = array ('Tylenol','NyQuil','Nasal Spray', 'Cough Drop', 'Vitamins', 'Vicks', 'Fever Fluid', 'Pain Reliever', 'Equate Allergy', 'Anti-Biotic')),
+                'contact_id' => rand(1, 20),
+                'amount' => $faker->randomFloat($nbMaxDecimals = NULL, $min = 10, $max = 800),
+                'item_id' => rand(1, 5),
                 'quantity' => $faker->numberBetween($min = 5, $max = 100),
                 'created_at' => date("Y-m-d H:i:s"),
                 'updated_at' => date("Y-m-d H:i:s")
