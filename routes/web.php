@@ -12,23 +12,19 @@
 */
 
 Route::get('/', function () {
-    $contacts = App\Contact::all();
-
-    echo '<ul>';
-    foreach ($contacts as $contact) {
-        echo '<li>' . $contact->fname . ", " . $contact->lname . '</li>';
-    }
-    echo '</ul>';
-
+    return view('welcome');
 });
 
 Route::get('contact/{id}', function ($id) {
     $contact = App\Contact::find($id);
-    echo "<img src= " . $contact->photo_url . " width=140 />" . $contact->fname . ", " . $contact->lname;
+    echo "<img src= " . $contact->photo_url . " width=140 />";
+    echo "<h1>" . $contact->fname . ", " . $contact->lname . "</h1>";
 
     echo '<ul>';
+
     foreach ($contact->donations as $donation) {
-        echo '<li>' . $donation->item_name . ' (' . $donation->quantity . ')' . '</li>';
+        $item = App\Item::find($donation->item_id);
+        echo '<li>' . $item->name . ' (' . $donation->quantity . ')' . '</li>';
     }
     echo '</ul>';
 });
@@ -37,6 +33,7 @@ Route::get('/donations', function() {
     $donations = App\Donation::all();
 
     foreach($donations as $donation) {
-        echo $donation->contact->fname . ' donated ' . $donation->item_name . ' on ' . $donation->created_at . '<br>';
+        $item = App\Item::find($donation->item_id);
+        echo $donation->contact->fname . ' donated ' . $item->name . ' on ' . $donation->created_at . '<br>';
     }
 });
