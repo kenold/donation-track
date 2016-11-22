@@ -15,13 +15,13 @@ class CreateDonationsTable extends Migration
     {
         Schema::create('donations', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('contact_id')->unsigned();
             $table->dateTime('date')->default(date("Y-m-d"));
-            $table->string('item_name', 255);
+            $table->integer('contact_id')->unsigned();
+            $table->float('amount');
+            $table->integer('item_id')->unsigned();
             $table->bigInteger('quantity');
-            //$table->integer('category_id')->unsigned();
             $table->foreign('contact_id')->references('id')->on('contacts');
-            //$table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('item_id')->references('id')->on('items');
             $table->timestamps();
         });
     }
