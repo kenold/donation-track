@@ -16,3 +16,6 @@ Route::get('/', function () {
 });
 
 Route::resource('contacts', 'ContactController');
+Route::resource('items', 'ItemController');
+Route::resource('donations', 'DonationController');
+Route::resource('categories', 'CategoryController');

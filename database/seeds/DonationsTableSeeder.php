@@ -24,7 +24,7 @@ class DonationsTableSeeder extends Seeder
                 'contact_id' => rand(1, 20),
                 'amount' => $faker->randomFloat($nbMaxDecimals = NULL, $min = 10, $max = 800),
                 'item_id' => 1, //rand(1, 5),
-                'quantity' => $faker->numberBetween($min = 5, $max = 100),
+                'item_qty' => $faker->numberBetween($min = 5, $max = 100),
                 'created_at' => date("Y-m-d H:i:s"),
                 'updated_at' => date("Y-m-d H:i:s")
             ];
