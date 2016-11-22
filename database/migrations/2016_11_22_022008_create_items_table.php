@@ -18,7 +18,6 @@ class CreateItemsTable extends Migration
             $table->string('name')->default('Medicine');
             $table->integer('category_id')->unsigned();
             $table->text('notes');
-            $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
         });
     }
