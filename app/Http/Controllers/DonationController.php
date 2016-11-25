@@ -14,7 +14,7 @@ class DonationController extends Controller
      */
     public function index()
     {
-        $donations = Donation::paginate(5);
+        $donations = Donation::with('contact')->get();
 
         return view('donations.index', compact('donations'));
     }
