@@ -1,12 +1,18 @@
 @extends('layouts.main')
 
 @section('content')
-<ul>
-    @foreach ($donations as $donation)
-        <h1>{{ $donation->contact->fname }}, {{ $donation->contact->lname }}</h1>
-        <li>Amount: ${{ $donation->amount }}</li>
-        <li>Item: {{ $donation->item_id }} ({{ $donation->item_qty}})</li>
-        <li>Date: {{ $donation->created_at->diffInYears(Carbon\Carbon::now()) }}</li>
-    @endforeach
-</ul>
+    <table class="table">
+        <tr>
+            <th>Contact ID</th>
+            <th>Contact</th>
+            <th># of Items</th>
+        </tr>
+        @foreach ($contacts as $contact)
+            <tr>
+                <td>{{ $contact->id }}</td>
+                <td>{{ $contact->fname }} {{ $contact->lname }}</td>
+                <td>{{ count($contact->items) }}</td>
+            </tr>
+        @endforeach
+    </table>
 @endsection
