@@ -15,9 +15,9 @@ class Item extends Model {
 		return $this->belongsTo('App\Category');
 	}
 
-	public function donation()
+	public function contacts()
 	{
-		return $this->belongsTo('App\Donation');
+		return $this->belongsToMany('App\Contact')->withTimestamps();
 	}
 
 }
