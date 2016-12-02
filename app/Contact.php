@@ -11,9 +11,8 @@ class Contact extends Model {
 
 	protected $dates = ['deleted_at'];
 
-	public function donations()
+	public function items()
 	{
-		return $this->hasMany('App\Donation');
+		return $this->belongsToMany('App\Item')->withTimestamps();
 	}
-
 }
