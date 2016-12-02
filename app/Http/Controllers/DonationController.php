@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Donation;
+use App\Contact;
+use App\Item;
 
 class DonationController extends Controller
 {
@@ -14,9 +15,8 @@ class DonationController extends Controller
      */
     public function index()
     {
-        $donations = Donation::paginate(5);
-
-        return view('donations.index', compact('donations'));
+        $contacts = Contact::with('items')->get();
+        return view('donations.index', compact('contacts'));
     }
 
     /**
