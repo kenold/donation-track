@@ -1,6 +1,8 @@
 @extends('layouts.main')
 
 @section('content')
+    <h1>Donations</h1>
+    
     <table class="table">
         <tr>
             <th>Contact ID</th>
