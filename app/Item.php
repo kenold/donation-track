@@ -17,7 +17,10 @@ class Item extends Model {
 
 	public function contacts()
 	{
-		return $this->belongsToMany('App\Contact')->withTimestamps();
+		return $this->belongsToMany('App\Contact')
+			->withPivot('date', 'item_qty')
+			->orderBy('contact_item.date', 'desc')
+			->withTimestamps();
 	}
 
 }
