@@ -15,11 +15,10 @@ class CreateContactItemTable extends Migration
     {
         Schema::create('contact_item', function (Blueprint $table) {
             $table->increments('id');
-            //$table->date('date')->default(date("Y-m-d"));
+            $table->date('date');
             $table->integer('contact_id')->unsigned();
-            //$table->float('amount');
             $table->integer('item_id')->unsigned();
-            //$table->bigInteger('item_qty');
+            $table->bigInteger('item_qty');
             $table->timestamps();
         });
     }
