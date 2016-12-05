@@ -15,7 +15,8 @@ class DonationController extends Controller
      */
     public function home()
     {
-        $contacts = Contact::with('items')->take(5)->orderBy('updated_at', 'DESC')->get();
+        $contacts = Contact::with('items')->take(5)->get();
+        //dd($contacts->items->name);
         return view('donations.index', compact('contacts'));
     }
 
@@ -54,7 +55,9 @@ class DonationController extends Controller
      */
     public function show($id)
     {
-        //
+        $contact = Contact::find($id);
+
+        return view('donations.show', compact('contact'));
     }
 
     /**
