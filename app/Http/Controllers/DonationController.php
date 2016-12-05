@@ -13,6 +13,12 @@ class DonationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function home()
+    {
+        $contacts = Contact::with('items')->take(5)->orderBy('updated_at', 'DESC')->get();
+        return view('donations.index', compact('contacts'));
+    }
+
     public function index()
     {
         $contacts = Contact::with('items')->get();
