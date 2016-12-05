@@ -14,5 +14,6 @@
 Route::resource('/', 'DonationController@home');
 Route::resource('contacts', 'ContactController');
 Route::resource('items', 'ItemController');
-Route::resource('donations', 'DonationController');
+Route::get('donations', 'DonationController@index');
+Route::get('donations/contact/{id}', 'DonationController@show');
 Route::resource('categories', 'CategoryController');
