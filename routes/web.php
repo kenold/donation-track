@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::resource('/', 'DonationController@home');
 Route::resource('contacts', 'ContactController');
 Route::resource('items', 'ItemController');
 Route::resource('donations', 'DonationController');
