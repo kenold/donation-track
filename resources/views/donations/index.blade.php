@@ -12,7 +12,7 @@
         @foreach ($contacts as $contact)
             <tr>
                 <td>{{ $contact->id }}</td>
-                <td>{{ $contact->fname }} {{ $contact->lname }}</td>
+                <td><a href="{{ url('/donations/contact', $contact->id) }}">{{ $contact->fname }} {{ $contact->lname }}</a></td>
                 <td>{{ count($contact->items) }} <br /></td>
             </tr>
         @endforeach
