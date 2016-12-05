@@ -51,6 +51,30 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => $now,
                 'updated_at' => $now,
             ],
+            [
+                'name' => 'Water (12. oz)',
+                'category_id' => 3,
+                'created_at' => $now,
+                'updated_at' => $now,
+            ],
+            [
+                'name' => 'Bicycles',
+                'category_id' => 2,
+                'created_at' => $now,
+                'updated_at' => $now,
+            ],
+            [
+                'name' => 'Diapers',
+                'category_id' => 1,
+                'created_at' => $now,
+                'updated_at' => $now,
+            ],
+            [
+                'name' => 'Sport Shake',
+                'category_id' => 3,
+                'created_at' => $now,
+                'updated_at' => $now,
+            ],
 
         ]);
     }
