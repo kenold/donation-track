@@ -1,8 +1,9 @@
 @extends('layouts.main')
 
 @section('content')
-    <h1>{{ $contact->lname}}, {{ $contact->fname}} {{ $contact->mname}}</h1>
-
+    <h1>{{ $contact->lname}}, {{ $contact->fname}} {{ $contact->mname}}
+        <small>Total items: {{ count($contact->items) }}</small></h1>
+    <hr>
     <table class="table">
         <tr>
             <th>Items</th>
@@ -12,8 +13,8 @@
         @foreach ($contact->items as $item)
             <tr>
                 <td>{{ $item->name }} <br /></td>
-                <td>-</td>
-                <td>{{ $item->pivot->updated_at->diffForHumans() }}</td>
+                <td>{{ $item->pivot->item_qty }}</td>
+                <td>{{ date('F d, Y', strtotime($item->pivot->date)) }}</td>
             </tr>
         @endforeach
     </table>
