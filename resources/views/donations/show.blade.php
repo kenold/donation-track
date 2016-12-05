@@ -4,7 +4,7 @@
     <h1>{{ $contact->lname}}, {{ $contact->fname}} {{ $contact->mname}}
         <small>Total items: {{ count($contact->items) }}</small></h1>
     <hr>
-    <table class="table">
+    <table class="table table-striped">
         <tr>
             <th>Items</th>
             <th># of Items</th>
