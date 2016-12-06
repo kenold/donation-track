@@ -6,8 +6,8 @@
     <table class="table">
         <tr>
             <th>Contact ID</th>
-            <th>Contact</th>
-            <th># of Items</th>
+            <th>Contact Name</th>
+            <th># of Items Donated</th>
         </tr>
         @foreach ($contacts as $contact)
             <tr>
