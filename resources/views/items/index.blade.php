@@ -1,19 +1,18 @@
-@extends('layouts.main')
+@extends('layouts.sidebar')
+
+@section('sidebar')
+    <div class="list-group">
+        <ul>
+            <li class="list-group-item">All <span class="badge">{{ $items->count() }}</span></li>
+            @foreach ($categories as $category)
+                <li class="list-group-item">{{ $category->name }} <span class="badge">{{ $category->items->count() }}</span></li>
+            @endforeach
+        </ul>
+    </div>
+@endsection
 
 @section('content')
-    <div class="col-md-3">
-    <div class="list-group">
-    <ul>
-        <li class="list-group-item">All <span class="badge">{{ $items->count() }}</span></li>
-        @foreach ($categories as $category)
-            <li class="list-group-item">{{ $category->name }} <span class="badge">{{ $category->items->count() }}</span></li>
-        @endforeach
-    </ul>
-    </div>
-</div>
-
-<div class="col-md-9">
-    <table class="table table-striped">
+    <table class="table table-striped table-responsive">
         <tr>
             <th>Name</th>
             <th>Category</th>
@@ -25,5 +24,4 @@
             </tr>
         @endforeach
     </table>
-</div>
 @endsection
