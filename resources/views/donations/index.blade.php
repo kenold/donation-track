@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <h1>Donations</h1>
+    <h1>Most Recents</h1>
 
     <table class="table">
         <tr>
@@ -12,7 +12,9 @@
         @foreach ($contacts as $contact)
             <tr>
                 <td>{{ $contact->id }}</td>
-                <td><a href="{{ url('/donations/contact', $contact->id) }}">{{ $contact->fname }} {{ $contact->lname }}</a></td>
+                <td><a href="{{ url('/donations/contact', $contact->id) }}">{{ $contact->fname }}
+                    {{ isset($contact->mname) ? $contact->mname.'.' : '' }}
+                    {{ $contact->lname }}</a></td>
                 <td>{{ count($contact->items) }} <br /></td>
             </tr>
         @endforeach
