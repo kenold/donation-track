@@ -1,5 +1,9 @@
 @extends('layouts.sidebar')
 
+@section('page-header')
+    <h1>Item Listing</h1>
+@endsection
+
 @section('sidebar')
     <div class="list-group">
         <ul>
@@ -13,10 +17,12 @@
 
 @section('content')
     <table class="table table-striped table-responsive">
-        <tr>
-            <th>Name</th>
-            <th>Category</th>
-        </tr>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+            </tr>
+        </thead>
         @foreach ($items as $item)
             <tr>
                 <td>{{ $item->name }}</td>

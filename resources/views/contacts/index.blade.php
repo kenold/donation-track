@@ -1,5 +1,9 @@
 @extends('layouts.main')
 
+@section('page-header')
+    <h1>Recent Contacts</h1>
+@endsection
+
 @section('content')
     <table class="table table-striped table-responsive">
         <thead>

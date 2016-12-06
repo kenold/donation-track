@@ -1,14 +1,18 @@
 @extends('layouts.main')
 
 @section('content')
-    <h1>Most Recents</h1>
+    @section('page-header')
+        <h1>Recent Donations</h1>
+    @endsection
 
     <table class="table">
-        <tr>
-            <th>Contact ID</th>
-            <th>Contact Name</th>
-            <th># of Items Donated</th>
-        </tr>
+        <thead>
+            <tr>
+                <th>Contact ID</th>
+                <th>Contact Name</th>
+                <th># of Items Donated</th>
+            </tr>
+        </thead>
         @foreach ($contacts as $contact)
             <tr>
                 <td>{{ $contact->id }}</td>

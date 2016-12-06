@@ -5,7 +5,7 @@
 
     <div class="container">
         <div class="page-header">
-            <h1>Most Recent Contacts</h1>
+            @yield('page-header')
         </div>
 
         <div class="row">
