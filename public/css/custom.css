@@ -1,7 +1,7 @@
 body {
   min-height: 2000px;
   padding-top: 100px;
-  background: #eee;
+  background: #fff;
 }
 
 .navbar {
@@ -23,6 +23,11 @@ body {
 
 .table tbody>tr>td.middle {
 	vertical-align: middle;
+}
+
+/* remove first line in thead */
+.table > thead > tr:first-child > td {
+    border: none;
 }
 
 .media {
