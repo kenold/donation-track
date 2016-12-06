@@ -28,7 +28,7 @@
         <li><a href="#">Help</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-          <li><a href="form.html" class="btn btn-default">
+          <li><a href="#" class="btn btn-default">
               <i class="glyphicon glyphicon-plus"></i>
               Add Donation
             </a></li>
