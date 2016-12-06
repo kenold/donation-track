@@ -7,13 +7,13 @@
         <div class="row">
             <div class="col-md-3">
                 @yield('sidebar')
-            </div>
+            </div><!-- /.col-md-3 -->
 
-            <div class="col-md-9">
+            <div class="col-md-9 content">
                 @yield('content')
-            </div>
-        </div>
-    </div>
+            </div><!-- /.col-md-9 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
 
     <!-- Footer -->
     @include('partials._footer')
