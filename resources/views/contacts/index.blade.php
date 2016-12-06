@@ -1,17 +1,17 @@
 @extends('layouts.main')
 
 @section('content')
-    <h1>Most Recent Contacts</h1>
-
     <table class="table table-striped table-responsive">
-        <tr>
-            <th>Name</th>
-            <th>Job Title</th>
-            <th>Company</th>
-            <th>Phone</th>
-            <th>Location</th>
-            <th>Email</th>
-        </tr>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Job Title</th>
+                <th>Company</th>
+                <th>Phone</th>
+                <th>State</th>
+                <th>Email</th>
+            </tr>
+        </thead>
         @foreach ($contacts as $contact)
             <tr>
                 <td>{{ $contact->lname }}, {{ $contact->fname }}
