@@ -15,7 +15,7 @@
         @foreach ($contacts as $contact)
             <tr>
                 <td>{{ $contact->lname }}, {{ $contact->fname }}
-                    {{ isset($contact->mname) ? $contact->mname.'.' : '' }}</td>                
+                    {{ isset($contact->mname) ? $contact->mname.'.' : '' }}</td>
                 <td>{{ $contact->job_title }}</td>
                 <td>{{ $contact->company }}</td>
                 <td>{{ isset($contact->cell_phone) ? $contact->cell_phone : $contact->work_phone }}</td>
@@ -24,4 +24,6 @@
             </tr>
         @endforeach
     </table>
+
+    <div>{{ $contacts->links() }}</div>
 @endsection
