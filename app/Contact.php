@@ -18,4 +18,8 @@ class Contact extends Model {
 			->orderBy('contact_item.date', 'desc')
 			->withTimestamps();
 	}
+
+	public function scopeOrderByLast($query) {
+		return $query->orderBy('lname', 'asc');
+	}
 }
