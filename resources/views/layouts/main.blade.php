@@ -4,8 +4,12 @@
     @include('partials._nav')
 
     <div class="container">
-        <div class="row">            
-            <div class="col-md-12">
+        <div class="page-header">
+            <h1>Most Recent Contacts</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 content">
                 @yield('content')
             </div>
         </div>
