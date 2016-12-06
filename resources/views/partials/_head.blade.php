@@ -12,5 +12,7 @@
     <title>Donations Tracking App</title>
 
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css" rel="stylesheet">
+
     <link href="{{asset('css/custom.css') }}" rel="stylesheet">
   </head>
