@@ -4,6 +4,18 @@ body {
   background: #fff;
 }
 
+a {
+    color: #dd5638;
+}
+
+a:hover {
+    color: #333;
+}
+
+.page-header h1 {
+    color: #777;
+}
+
 .navbar {
 	-moz-box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.09) 0 2px 0;
@@ -26,9 +38,9 @@ body {
 }
 
 /* remove first line in thead */
-.table > thead > tr:first-child > td {
+/*.table > thead > tr:first-child > td {
     border: none;
-}
+}*/
 
 .media {
 	padding: 10px 0;
@@ -61,6 +73,23 @@ body {
   border-radius: 15px;
 }
 
-.content {
-    background-color: #fff;
+.pagination>li>a, .pagination>li>span {
+    color: #dd5638;
+}
+
+.pagination>li>a:hover {
+    color: #dd5638;
+}
+
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+    z-index: 3;
+    color: #fff;
+    cursor: default;
+    background-color: #dd5638;
+    border-color: #dd5638;
 }
