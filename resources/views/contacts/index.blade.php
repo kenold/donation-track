@@ -3,7 +3,7 @@
 @section('content')
     <h1>Most Recent Contacts</h1>
 
-    <table class="table table-striped">
+    <table class="table table-striped table-responsive">
         <tr>
             <th>Name</th>
             <th>Job Title</th>
