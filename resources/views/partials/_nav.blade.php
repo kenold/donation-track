@@ -14,6 +14,8 @@
         <li class="active"><a href="#">Home</a></li>
         <li><a href="{{ url('contacts') }}">Contacts</a></li>
         <li><a href="{{ url('donations') }}">Donations</a></li>
+        <li><a href="{{ url('items') }}">Items</a></li>
+        <li><a href="{{ url('categories') }}">Categories</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">New Post <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -23,9 +25,13 @@
             <li><a href="#">New Category</a></li>
           </ul>
         </li>
+        <li><a href="#">Help</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Help</a></li>
+          <li><a href="form.html" class="btn btn-default">
+              <i class="glyphicon glyphicon-plus"></i>
+              Add Donation
+            </a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
