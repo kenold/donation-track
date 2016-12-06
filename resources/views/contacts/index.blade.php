@@ -19,7 +19,7 @@
                     {{ $contact->lname }}</td>
                 <td>{{ $contact->job_title }}</td>
                 <td>{{ $contact->company }}</td>
-                <td>{{ $contact->cell_phone }}</td>
+                <td>{{ isset($contact->cell_phone ? $contact->cell : $contact->work_phone) }}</td>
                 <td>{{ $contact->state }}</td>
                 <td>{{ $contact->email }}</td>
             </tr>
