@@ -15,7 +15,9 @@ class DonationController extends Controller
      */
     public function home()
     {
-        $contacts = Contact::with('items')->take(5)->get();
+        $contacts = Contact::with('items')->take(10)->get();
+        //dd($contacts[0]->items[0]->name); Bicycles
+        //dd($contacts);
         return view('donations.index', compact('contacts'));
     }
 
