@@ -5,6 +5,17 @@
 @endsection
 
 @section('content')
+    <!-- Most recent -->
+    {{-- @foreach ($contacts->items as $item)
+        {{ $item->contact->fname }} <br />
+    @endforeach --}}
+
+    <p>5 most recent donations here</p>
+
+    <div class="page-header">
+        <h1>Top Donors</h1>
+    </div>
+
     <table class="table table-bordered table-responsive" id="filterTable">
         <thead>
             <tr>
@@ -24,11 +35,7 @@
                 </tr>
             @endforeach
         </tbody>
-
-        {{-- <h1>Most Recents</h1>
-        @foreach ($contacts->items as $item)
-            {{ $item->name }} <br />
-        @endforeach --}}
-
     </table>
+
+
 @endsection
